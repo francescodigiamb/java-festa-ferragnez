@@ -17,23 +17,34 @@ public class CheckGuest {
 
 		Scanner scan = new Scanner(System.in);
 
-		String[] nomi = new String[] { "Dua Lipa", "Paris Hilton", "Manuel Agnelli", "J-Ax", "Francesco Totti",
+		String[] nomi = { "Dua Lipa", "Paris Hilton", "Manuel Agnelli", "J-Ax", "Francesco Totti",
 				"Ilary Blasi", "Bebe Vio", "Luis", "Pardis Zarei", "Martina Maccherone", "Rachel Zeilic" };
+		
 		System.out.println("Buonasera, qual'è il suo nome?");
+		
 		String invitato = scan.nextLine();
+		
 		Boolean trovato = false;
+		
 		for (int i = 0; i < nomi.length; i++) {
-			if (invitato.equals(nomi[i])) {
+			if (invitato.equalsIgnoreCase(nomi[i])) {
+				
 				trovato = true;
+				
 				System.out.println(invitato);
+				
 				break;
 			}
 
 		}
 		if (trovato) {
-			System.out.println("Benvenuto alla festa!");
+			
+			System.out.println("Benvenuto/a alla festa!");
+		
 		} else {
+			
 			System.out.println("Mi dispiace non sei in lista, non ti posso far entrare!");
+		
 		}
 
 	}
